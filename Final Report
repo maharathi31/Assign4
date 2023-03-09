@@ -1,0 +1,95 @@
+Compilation of all results:
+
+Harvard Architecture:
+
+Simulation 1(without optimisation):
+system.cpu.dcache.overallHits::total         16402810                       # number of overall hits (Count)
+system.cpu.dcache.overallMisses::total        1734567                       # number of overall misses (Count)
+system.cpu.dcache.overallAccesses::total     18137377                       # number of overall (read+write) accesses
+system.cpu.dcache.overallMissRate::total     0.095635                       # miss rate for overall accesses (Ratio)
+
+Percentage Utilization: 90.43650579
+
+system.cpu.icache.overallHits::total         90138613                       # number of overall hits (Count)
+system.cpu.icache.overallMisses::total         726544                       # number of overall misses (Count)
+system.cpu.icache.overallAccesses::total     90865157                       # number of overall (read+write) accesses
+system.cpu.icache.overallMissRate::total     0.007996                       # miss rate for overall accesses (Ratio)
+
+Percentage Utilization: 99.20041518
+
+Optimisation 1(Partitioning):
+
+system.cpu.dcache.overallHits::total         22917450                       # number of overall hits (Count)
+system.cpu.dcache.overallMisses::total        1056987                       # number of overall misses (Count)
+system.cpu.dcache.overallAccesses::total     23974437                       # number of overall (read+write) accesses
+
+Percentage utilization:95.559119157%
+
+system.cpu.icache.overallHits::total         92831820                       # number of overall hits (Count)
+system.cpu.icache.overallMisses::total         726454                       # number of overall misses (Count)
+system.cpu.icache.overallAccesses::total     93558274                       # number of overall (read+write) accesses (Count)
+
+Percentage utilization: 99.22352779%
+
+Optimisation 2(Layout):
+
+system.cpu.dcache.overallHits::total         21399937                       # number of overall hits (Count)
+system.cpu.dcache.overallMisses::total         783210                       # number of overall misses (Count)
+system.cpu.dcache.overallAccesses::total     22183147                       # number of overall (read+write) accesses (Count)
+
+Percentage utilization: 96.4667908%
+
+system.cpu.icache.overallHits::total         70875631                       # number of overall hits (Count)
+system.cpu.icache.overallMisses::total         696828                       # number of overall misses (Count)
+system.cpu.icache.overallAccesses::total     71572459                       # number of overall (read+write) accesses (Count)
+
+Percentage utilization: 99.02640204%
+
+
+
+
+Von-Neumann Architecture:
+
+Simulation 1:
+system.cpu.dcache.overallHits::total         15508415                       # number of overall hits (Count)
+system.cpu.dcache.overallMisses::total        2628962                       # number of overall misses (Count)
+system.cpu.dcache.overallAccesses::total     18137377                       # number of overall (read+write) accesses (Count)
+
+Performance Utilization: 85.55 %
+
+system.cpu.icache.overallHits::total         90048303                       # number of overall hits (Count)
+system.cpu.icache.overallMisses::total         816854                       # number of overall misses (Count)
+system.cpu.icache.overallAccesses::total     90865157                       # number of overall (read+write) accesses (Count)
+Performance Utilization: 99.1%
+
+Total hits: 105556718
+Total accesses: 109002534
+Performance utilization: 96.83877440867568
+
+Simulation 2(optimised):
+system.cpu.dcache.overallHits::total         18023676                       # number of overall hits (Count)
+system.cpu.dcache.overallMisses::total        1950751                       # number of overall misses (Count)
+system.cpu.dcache.overallAccesses::total     19974427                       # number of overall (read+write) accesses (Count)
+
+Performance utilization: 90.233%
+
+system.cpu.icache.overallHits::total         91984230                       # number of overall hits (Count)
+system.cpu.icache.overallMisses::total         816857                       # number of overall misses (Count)
+system.cpu.icache.overallAccesses::total     92801087                       # number of overall (read+write) accesses (Count)
+
+Performance utilisation: 98.96%
+
+Total hits:110007906
+Total accesses:112775514 
+Performance utilization:97.5459140891169
+
+The Harvard architecture has separate memory spaces for instructions and data, and these memory spaces are accessed by separate buses. This means that the processor can access both an instruction and a piece of data simultaneously, which can result in faster processing speeds.
+
+The Von Neumann architecture, on the other hand, uses a single memory space for both instructions and data, and a single bus to access this memory space.
+
+As we can see clearly from the above results, the harvard architecture has better performance utilization percentages even before optimising the C code.
+
+
+
+
+
